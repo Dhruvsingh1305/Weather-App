@@ -8,8 +8,8 @@ async function getWeather() {
     resultDiv.textContent = "Please enter a location.";
     return;
   }
+const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
 
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
 
   try {
     const response = await fetch(apiUrl);
